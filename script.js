@@ -13,11 +13,14 @@ function addTask() {
     render()
 }
 
+
+
 function render() {
-    for(const i=0;i<tasks.length;i++) {
-        const li = document.createElement("li")
-        li.textContent = tasks[i]
-        taskList.appendChild(li)
-}
-    listCounter.textContent = "Tasks: " + tasks.length
+    taskList.innerHTML = "";
+    for (let i = 0; i < tasks.length; i++) {
+        let li = document.createElement("li");
+        li.textContent = tasks[i];
+        taskList.appendChild(li);
+    }
+    listCounter.textContent = "Tasks: " + tasks.length;
 }
